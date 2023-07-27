@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Caprasimo&family=Poppins:wght@500&display=swap');
+*{
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
+ box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 100px;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+   
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    height: 70px;
+}
+header .logo{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+ul{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+ul li{
+    margin-left: 45px;
+}
+
+.content{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .text{
+  
+    position: relative;
+    max-width: 600px;
+}
+
+.content .text h2{
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+    color: #333;
+}
+
+.content .text h2 span{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 1000;
+}
+.pp{
+    color: #4bac72;
+}
+.content .text a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+  color: #fff;
+  background: #4bac72;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imagee{
+   
+    display: flex;
+    width: 600px;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+.content .imagee img{
+    max-width: 340px;
+}
+
+.tum{
+    position:absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.tum li{
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.tum li:hover{
+    transform: translateY(-15px);
+}
+.tum li img{
+    max-width: 60px;
+}
+
+.circle{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    /* clip-path: circle(600px at right 900px); */
+}
+
+
+@media(max-width:990px)
+{
+    header{
+        padding: 20px 20px;
+    }
+    header img {
+        height: 48px;
+    }
+    
+    header ul{
+        display: none;
+    }
+
+    .toggle{
+        position: relative;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        background: url(images/menu.png);
+       
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 25px;
+       
+    }
+
+    .toggle.active{
+        position: relative;
+        background: url(images/close.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 25px;
+        filter: invert(1);
+        z-index: 2;
+       
+    }
+
+    /* The space represents a descendant selector, which means that the 
+    .active class should be applied to elements that are descendants of
+     an element with the class .toggle. */
+     header ul.nav.active{
+        position: fixed; /*important*/
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+    } 
+
+    header ul li{
+        margin: 30px;
+    }
+    section{
+        padding: 20px 20px 100px;
+    }
+    
+    .content{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .content .imagee{
+        max-width: 100%;
+        justify-content: center;
+    }
+    .content .imagee img {
+        max-width: 300px;
+    }
+    .content .text h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    .content .text {
+        width: 100%;
+    }
+
+    /* .circle{
+        clip-path: circle(400px at center bottom);
+    } */
+    .tum {left: 45%;}
+    
+    .tum li img {
+    max-width: 40px;
+      }
+     
+}
+
+@media(max-width:500px)
+{
+    header {
+        padding: 0px 21px;
+    }
+    section {
+        padding: 20px 45px 100px;
+    }
+    .content {
+        margin-top: 71px;
+    }
+    
+.content .text a {display: none;}
+.content .text h2 span {
+    color: #fff;}
+    /* .circle{
+        clip-path: circle(100vw at right 900px); 
+    } */
+
+    .content .imagee img {
+        max-width: 205px;
+    }
+}
+
+@media(max-width:430px){
+    .content .text h2 {
+        font-size: 1.5em;
+    }
+    
+    .content .text h2 span {
+            font-size: 50px;}
+}
