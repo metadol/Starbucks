@@ -262,10 +262,13 @@ ul li{
                 bottom: 70px;
             }
             .content {
-                margin-top: 20px;
+                margin-top: 0px;
             }
 
             .content .imagee {
                 margin-top: 10px;
+            }
+            .content .text h2 {
+                line-height: 1.7em;
             }
 }
